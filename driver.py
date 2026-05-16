@@ -49,14 +49,25 @@ class PhoneDriver:
     def swipe_up(self):
         """Свайп вверх"""
         w, h = self.get_size()
-        self.cmd(f"adb shell input swipe {w//2} {h-100} {w//2} 100")
+        start_x = w // 2
+        start_y = int(h * 0.8)
+        end_y = int(h * 0.3)
+        self.cmd(f"adb shell input swipe {start_x} {start_y} {start_x} {end_y}")
         print("✅ Свайп вверх")
     
     def swipe_down(self):
         """Свайп вниз"""
         w, h = self.get_size()
-        self.cmd(f"adb shell input swipe {w//2} 100 {w//2} {h-100}")
+        start_x = w // 2
+        start_y = int(h * 0.3)
+        end_y = int(h * 0.8)
+        self.cmd(f"adb shell input swipe {start_x} {start_y} {start_x} {end_y}")
         print("✅ Свайп вниз")
+
+    def swipe(self, x1, y1, x2, y2):
+        """Произвольный свайп"""
+        self.cmd(f"adb shell input swipe {x1} {y1} {x2} {y2}")
+        print(f"✅ Свайп ({x1}, {y1}) -> ({x2}, {y2})")
     
     def text(self, msg):
         """Ввод текста"""
