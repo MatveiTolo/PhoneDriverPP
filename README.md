@@ -21,3 +21,8 @@ git clone https://github.com/ВАШ_АККАУНТ/PhoneDriverPP.git
 cd PhoneDriverPP
 pip install -r requirements.txt
 python driver.py
+
+### 4. 📺 Трансляция экрана телефона
+
+```bash
+python mirror.py
