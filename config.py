@@ -5,10 +5,10 @@
 import os
 from pathlib import Path
 
-# OLLAMA 
-OLLAMA_HOST = "http://26.206.215.215:11434"
+# OLLAMA
+OLLAMA_HOST = "http://127.0.0.1:11434"
 OLLAMA_MODEL = "qwen3-vl:4b"  # Мультимодальная модель для чата и зрения
-OLLAMA_CONNECT_TIMEOUT = 30  # Увеличено для удалённых туннелей (было 5)
+OLLAMA_CONNECT_TIMEOUT = 10  # Локальный хост, поэтому таймаут можно держать ниже
 OLLAMA_GENERATE_TIMEOUT = 120
 OLLAMA_CHAT_TIMEOUT = 180
 OLLAMA_API_KEY = os.environ.get("OLLAMA_API_KEY", "")  # Optional API key for Ollama Cloud

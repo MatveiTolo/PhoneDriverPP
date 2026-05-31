@@ -13,7 +13,7 @@ from task_executor import TaskExecutor
 def print_header():
     """Печать заголовка"""
     print("\n" + "="*60)
-    print("🤖 PHONE DRIVER AI - Phase 1 Foundation")
+    print("PHONE DRIVER AI")
     print("="*60)
 
 def print_menu():
